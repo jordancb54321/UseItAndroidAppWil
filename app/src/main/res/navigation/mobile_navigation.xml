@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.jordan.useit.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <!-- Add action to navigate to DetailFragment -->
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/nav_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_projects"
+        android:name="com.jordan.useit.ui.projects.ProjectsFragment"
+        android:label="Projects"
+        tools:layout="@layout/fragment_projects" />
+
+    <fragment
+        android:id="@+id/nav_social_media"
+        android:name="com.jordan.useit.ui.socialmedia.SocialMediaFragment"
+        android:label="Social Media"
+        tools:layout="@layout/fragment_social_media" />
+
+    <fragment
+        android:id="@+id/nav_donations"
+        android:name="com.jordan.useit.ui.donations.DonationsFragment"
+        android:label="Donations"
+        tools:layout="@layout/fragment_donations" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.jordan.useit.ui.contact.ContactFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_find_us"
+        android:name="com.jordan.useit.ui.findus.FindUsFragment"
+        android:label="Find Us!"
+        tools:layout="@layout/fragment_find_us" />
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.jordan.useit.ui.about.AboutUsFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us" />
+
+    <!-- Add the DetailFragment definition -->
+    <fragment
+        android:id="@+id/nav_detail"
+        android:name="com.jordan.useit.ui.home.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_projects"
+            android:icon="@drawable/baseline_assignment_24"
+            android:title="Projects" />
+        <item
+            android:id="@+id/nav_social_media"
+            android:icon="@drawable/baseline_category_24"
+            android:title="Social Media" />
+        <item
+            android:id="@+id/nav_donations"
+            android:icon="@drawable/baseline_monetization_on_24"
+            android:title="Donations" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/baseline_local_phone_24"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/nav_find_us"
+            android:icon="@drawable/baseline_map_24"
+            android:title="Find Us!" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/baseline_info_24"
+            android:title="About Us" />
+
+
+
+
+    </group>
+
+</menu>

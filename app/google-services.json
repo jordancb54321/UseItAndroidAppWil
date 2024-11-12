@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159549902444",
+    "project_id": "useit-b7ba0",
+    "storage_bucket": "useit-b7ba0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159549902444:android:f34c4ed72da96ab2d21249",
+        "android_client_info": {
+          "package_name": "com.jordan.useit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpJMGwOoP8pKU_J4yKDvG0uPvewsJizmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
