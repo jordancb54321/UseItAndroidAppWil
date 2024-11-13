@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Partner With An Award Winning Waste Beneficiation NPO"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/our_story_partner"
+            app:layout_constraintTop_toBottomOf="@id/headerTitle" />
+
+        <TextView
+            android:id="@+id/mandateTitle"
+            style="@style/SectionTitle"
+            android:text="Our Mandate"
+            app:layout_constraintTop_toBottomOf="@id/headerImage" />
+
+        <TextView
+            android:id="@+id/mandateContent"
+            style="@style/SectionContent"
+            android:text="USE-IT has been established as a non-profit organisation to research and develop waste beneficiation technologies with the aim of diverting waste from landfill and creating jobs in the green economy. Our primary funding and mandate is in the eThekwini area in association with the Economic Development Unit.\n\nUSE-IT is a special purpose vehicle, designed to act as a cluster for the waste materials recovery industry in eThekwini Municipality. In terms of Governance USE-IT is overseen by a board of directors made up of members from a diverse range of backgrounds in the waste material recovery, business and environmental management backgrounds."
+            app:layout_constraintTop_toBottomOf="@id/mandateTitle" />
+
+        <TextView
+            android:id="@+id/visionTitle"
+            style="@style/SectionTitle"
+            android:text="Vision &amp; Strategy"
+            app:layout_constraintTop_toBottomOf="@id/mandateContent" />
+
+        <TextView
+            android:id="@+id/ourVisionTitle"
+            style="@style/SubsectionTitle"
+            android:text="Our Vision"
+            app:layout_constraintTop_toBottomOf="@id/visionTitle" />
+
+        <TextView
+            android:id="@+id/visionContent"
+            style="@style/SectionContent"
+            android:text="USE-IT is the leading authority on driving economic opportunities in waste diversion and beneficiation to support the circular economy."
+            app:layout_constraintTop_toBottomOf="@id/ourVisionTitle" />
+
+        <TextView
+            android:id="@+id/strategyTitle"
+            style="@style/SubsectionTitle"
+            android:text="Our Strategy"
+            app:layout_constraintTop_toBottomOf="@id/visionContent" />
+
+        <TextView
+            android:id="@+id/strategyContent"
+            style="@style/SectionContent"
+            android:text="Developing partnerships to grow and succeed within the green economy."
+            app:layout_constraintTop_toBottomOf="@id/strategyTitle" />
+
+        <ImageView
+            android:id="@+id/strategyImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/story_strategy"
+            app:layout_constraintTop_toBottomOf="@id/strategyContent" />
+
+        <TextView
+            android:id="@+id/goalsTitle"
+            style="@style/SectionTitle"
+            android:text="Our Goals"
+            app:layout_constraintTop_toBottomOf="@id/strategyImage" />
+
+        <include
+            android:id="@+id/goals"
+            layout="@layout/layout_goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/goalsTitle" />
+
+        <TextView
+            android:id="@+id/boardTitle"
+            style="@style/SectionTitle"
+            android:text="Our Board Members"
+            app:layout_constraintTop_toBottomOf="@id/goals" />
+
+        <include
+            android:id="@+id/boardMembers"
+            layout="@layout/layout_board_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/boardTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView> 
