@@ -12,4 +12,11 @@
     <string name="menu_our_projects">Our Projects</string>
     <string name="menu_media">Media</string>
     <string name="menu_contact">Contact Us</string>
+
+    <string name="contact_form_name">Your Name</string>
+    <string name="contact_form_email">Email Address</string>
+    <string name="contact_form_message">Your Message</string>
+    <string name="contact_form_submit">Send Message</string>
+    <string name="projects_description">Explore our innovative waste management and recycling projects</string>
+    <string name="media_gallery_title">Media Gallery</string>
 </resources>

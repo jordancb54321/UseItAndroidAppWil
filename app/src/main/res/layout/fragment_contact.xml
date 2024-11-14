@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Button to show WhatsApp number -->
+        <Button
+            android:id="@+id/button_whatsapp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="WhatsApp Number"
+            android:onClick="showWhatsAppNumber"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Button to show Email -->
+        <Button
+            android:id="@+id/button_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:onClick="showEmail"
+            app:layout_constraintTop_toBottomOf="@id/button_whatsapp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Button to show Phone Number -->
+        <Button
+            android:id="@+id/button_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:onClick="showPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@id/button_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- WebView to embed a map -->
+        <WebView
+            android:id="@+id/webview_map"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toBottomOf="@id/button_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
