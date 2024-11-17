@@ -52,35 +52,42 @@ class OurStoryFragment : Fragment() {
     }
 
     private fun setupBoardMembers() {
-        val boardMembers = listOf(
-            BoardMember("Paulos Ngcobo", "Chairman", R.drawable.paulos_ngcobo),
-            BoardMember("Belinda Putterill", "Managing Director", R.drawable.belinda_putterill),
-            BoardMember("Adrienne Brown", "Finance", R.drawable.adrienne_brown),
-            BoardMember("Portio Dlamini", "Director", R.drawable.portio_dlamini),
-            BoardMember("Devon de Sousa", "Legal & HR", R.drawable.devon_de_sousa),
-            BoardMember("Gerald Chotu", "Circular Economy Sustainability", R.drawable.gerald_chotu),
-            BoardMember("Heidi Cox", "Textile Sustainability", R.drawable.heidi_cox),
-            BoardMember("Anuka Brown", "Flexing Packaging Sustainability", R.drawable.anuka_brown)
-        )
+    val boardMembers = listOf(
+        BoardMember("Paulos Ngcobo", "Chairman", R.drawable.paulos_ngcobo),
+        BoardMember("Belinda Putterill", "Managing Director", R.drawable.belinda_putterill),
+        BoardMember("Adrienne Brown", "Finance", R.drawable.adrienne_brown),
+        BoardMember("Portio Dlamini", "Director", R.drawable.portio_dlamini),
+        BoardMember("Devon de Sousa", "Legal & HR", R.drawable.devon_de_sousa),
+        BoardMember("Gerald Chotu", "Circular Economy Sustainability", R.drawable.gerald_chotu),
+        BoardMember("Heidi Cox", "Textile Sustainability", R.drawable.heidi_cox),
+        BoardMember("Anuka Brown", "Flexing Packaging Sustainability", R.drawable.anuka_brown)
+    )
 
-        boardMembers.forEachIndexed { index, member ->
-            val memberView = when (index) {
-                0 -> binding.boardMembers.memberChairman
-                1 -> binding.boardMembers.memberMd
+    boardMembers.forEachIndexed { index, member ->
+        val memberView = when (index) {
+            0 -> binding.boardMembers.memberChairman
+            1 -> binding.boardMembers.memberMd
+            2 -> binding.boardMembers.memberFinance
+            3 -> binding.boardMembers.memberDirector
+            4 -> binding.boardMembers.memberLegal
+            5 -> binding.boardMembers.memberCircularEconomy
+            6 -> binding.boardMembers.memberTextile
+            7 -> binding.boardMembers.memberFlexingPackaging
+            else -> null
+        }
 
-                else -> null
-            }
-
-            memberView?.apply {
-                memberImage.setImageResource(member.imageRes)
-                memberName.text = member.name
-                memberRole.text = member.role
-                viewInfoButton.setOnClickListener {
-                    showMemberInfo(member)
-                }
+        memberView?.apply {
+            memberImage.setImageResource(member.imageRes)
+            memberName.text = member.name
+            memberRole.text = member.role
+            viewInfoButton.setOnClickListener {
+                showMemberInfo(member)
             }
         }
     }
+}
+
+
 
     private fun showMemberInfo(member: BoardMember) {
         // Implement member info dialog or navigation
