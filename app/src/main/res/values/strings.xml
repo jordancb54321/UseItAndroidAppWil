@@ -19,4 +19,12 @@
     <string name="contact_form_submit">Send Message</string>
     <string name="projects_description">Explore our innovative waste management and recycling projects</string>
     <string name="media_gallery_title">Media Gallery</string>
+    <string name="latest_blog_posts">Latest Blog Posts</string>
+    <string name="explore_the_latest_posts_updates_and_features_right_here">Explore the latest posts, updates, and features right here.</string>
+    <string name="about_us">About Us</string>
+    <string name="stay_updated_with_our_latest_blog_posts_and_news">Stay updated with our latest blog posts and news.</string>
+    <string name="_2024_your_blog_all_rights_reserved">© 2024 Your Blog | All rights reserved.</string>
+    <string name="welcome_to_your_blog">Welcome to Your Blog!</string>
+    <string name="use_it_logo">Use-It Logo</string>
+    <string name="our_blogs">Our Blogs</string>
 </resources>
