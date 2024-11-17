@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Section: Our Partner Incubation Programs -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/partnerIncubationCard"
             android:layout_width="0dp"
@@ -37,7 +37,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!-- Project 1: Owethu Sewing Project -->
+
                 <TextView
                     android:id="@+id/project1Title"
                     android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <!-- Image for Project 1 -->
+
                 <ImageView
                     android:id="@+id/project1Image"
                     android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                     android:src="@drawable/owethu_sewing_project"
                     android:contentDescription="Image of Owethu Sewing Project" />
 
-                <!-- Project 2: Educational Toy Project -->
+
                 <TextView
                     android:id="@+id/project2Title"
                     android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <!-- Image for Project 2 -->
+
                 <ImageView
                     android:id="@+id/project2Image"
                     android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                     android:src="@drawable/educational_toy_project"
                     android:contentDescription="Image of Educational Toy Project" />
 
-                <!-- Project 3: Ikhwezi Bakery -->
+
                 <TextView
                     android:id="@+id/project3Title"
                     android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <!-- Image for Project 3 -->
+
                 <ImageView
                     android:id="@+id/project3Image"
                     android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                     android:src="@drawable/ikhwezi_bakery_project"
                     android:contentDescription="Image of Ikhwezi Bakery" />
 
-                <!-- Project 4: Clothing 4 Repurpose -->
+
                 <TextView
                     android:id="@+id/project4Title"
                     android:layout_width="wrap_content"
@@ -147,7 +147,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <!-- Image for Project 4 -->
+
                 <ImageView
                     android:id="@+id/project4Image"
                     android:layout_width="match_parent"
@@ -160,7 +160,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Section: Driving Economic Opportunities in Waste Diversion -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/economicOpportunitiesCard"
             android:layout_width="0dp"
@@ -187,7 +187,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!-- Subsection: Innovation in Waste -->
+
                 <TextView
                     android:id="@+id/innovationInWasteTitle"
                     android:layout_width="wrap_content"
@@ -207,7 +207,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <!-- Image for Innovation in Waste -->
+
                 <ImageView
                     android:id="@+id/innovationInWasteImage"
                     android:layout_width="match_parent"
@@ -220,7 +220,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Section: Our Innovation Projects -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/innovationProjectsCard"
             android:layout_width="0dp"
@@ -247,7 +247,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!-- Project: Good Economy Project -->
+
                 <TextView
                     android:id="@+id/goodEconomyProjectTitle"
                     android:layout_width="wrap_content"
@@ -267,7 +267,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <!-- Image for Good Economy Project -->
+
                 <ImageView
                     android:id="@+id/goodEconomyProjectImage"
                     android:layout_width="match_parent"
@@ -277,7 +277,7 @@
                     android:src="@drawable/goodeconomy_project"
                     android:contentDescription="Image of Good Economy Project" />
 
-                <!-- Project: Establishment of Buy-Back Centres -->
+
                 <TextView
                     android:id="@+id/buyBackCentresTitle"
                     android:layout_width="wrap_content"
@@ -288,7 +288,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <!-- Sub-project: Kwandengezi Waste Collectors Network -->
+
                 <TextView
                     android:id="@+id/kwandengeziTitle"
                     android:layout_width="wrap_content"
@@ -308,7 +308,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
-                <!-- Image for Kwandengezi Waste Collectors Network -->
+
                 <ImageView
                     android:id="@+id/kwandengeziImage"
                     android:layout_width="match_parent"
@@ -318,7 +318,7 @@
                     android:src="@drawable/wastcollector_project"
                     android:contentDescription="Image of Kwandengezi Waste Collectors Network" />
 
-                <!-- Sub-project: Clermont / New Germany - Big Start Recycling -->
+
                 <TextView
                     android:id="@+id/clermontTitle"
                     android:layout_width="wrap_content"
@@ -351,7 +351,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Footer Section (Styled like your home page's footer) -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/footerCard"
             android:layout_width="match_parent"
@@ -379,7 +379,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <!-- Partners Logos -->
+
                 <LinearLayout
                     android:id="@+id/partnersLogosContainer"
                     android:layout_width="0dp"
@@ -391,7 +391,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent">
 
-                    <!-- Partner 1 Logo -->
+
                     <ImageView
                         android:id="@+id/partner1Logo"
                         android:layout_width="100dp"
@@ -458,10 +458,10 @@
 
 
 
-                    <!-- Add more partner logos as needed -->
+
                 </LinearLayout>
 
-                <!-- Copyright Text -->
+
                 <TextView
                     android:id="@+id/footerCopyright"
                     android:layout_width="0dp"

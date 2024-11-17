@@ -33,7 +33,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun openSocialMedia(platform: String) {
-        // Implement social media link handling here
         Snackbar.make(binding.root, "Opening $platform...", Snackbar.LENGTH_SHORT).show()
     }
 
