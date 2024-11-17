@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <!-- Button to show WhatsApp number -->
+
         <Button
             android:id="@+id/button_whatsapp"
             android:layout_width="0dp"
@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Button to show Email -->
+
         <Button
             android:id="@+id/button_email"
             android:layout_width="0dp"
@@ -32,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp" />
 
-        <!-- Button to show Phone Number -->
+
         <Button
             android:id="@+id/button_phone"
             android:layout_width="0dp"
@@ -44,7 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp" />
 
-        <!-- WebView to embed a map -->
+
         <WebView
             android:id="@+id/webview_map"
             android:layout_width="0dp"

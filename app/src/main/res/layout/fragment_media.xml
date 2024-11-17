@@ -166,7 +166,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <!-- Green Environment Links -->
+
                 <TextView
                     android:id="@+id/greenLink1"
                     android:layout_width="wrap_content"
@@ -241,7 +241,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Section: Our Development Strategy -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/developmentStrategyCard"
             android:layout_width="0dp"
@@ -268,7 +268,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!-- Development Strategy Links -->
+
                 <TextView
                     android:id="@+id/developmentLink1"
                     android:layout_width="wrap_content"
@@ -303,7 +303,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Section: Leveraging Resources To Build Opportunities In The Green Economy -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/leveragingResourcesCard"
             android:layout_width="0dp"
@@ -342,7 +342,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Section: FAQ -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/faqCard"
             android:layout_width="match_parent"
@@ -369,8 +369,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <!-- FAQ Items -->
-                <!-- Item 1 -->
+
                 <TextView
                     android:id="@+id/faqQuestion1"
                     android:layout_width="wrap_content"
@@ -397,12 +396,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-                <!-- Add more FAQ items similarly -->
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Footer Section (Styled like your home page's footer) -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/footerCard"
             android:layout_width="match_parent"
@@ -442,7 +441,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-                <!-- Social Links -->
+
                 <TextView
                     android:id="@+id/footerSocialLinksTitle"
                     android:layout_width="wrap_content"
@@ -495,7 +494,7 @@
 
                 </LinearLayout>
 
-                <!-- Copyright Text -->
+
                 <TextView
                     android:id="@+id/footerCopyright"
                     android:layout_width="0dp"

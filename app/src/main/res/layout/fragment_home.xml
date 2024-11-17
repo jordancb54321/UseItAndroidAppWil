@@ -141,7 +141,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
 
-                        <!-- Social Links -->
+
                         <TextView
                             android:id="@+id/footerSocialLinksTitle"
                             android:layout_width="wrap_content"
@@ -194,7 +194,7 @@
 
                         </LinearLayout>
 
-                        <!-- Copyright Text -->
+
                         <TextView
                             android:id="@+id/footerCopyright"
                             android:layout_width="0dp"

@@ -22,6 +22,54 @@
         android:layout_margin="8dp"
         app:layout_columnWeight="1" />
 
-    <!-- Repeat for other members -->
+    <include
+        android:id="@+id/memberFinance"
+        layout="@layout/item_board_member"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_columnWeight="1" />
+
+    <include
+        android:id="@+id/memberDirector"
+        layout="@layout/item_board_member"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_columnWeight="1" />
+
+    <include
+        android:id="@+id/memberLegal"
+        layout="@layout/item_board_member"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_columnWeight="1" />
+
+    <include
+        android:id="@+id/memberCircularEconomy"
+        layout="@layout/item_board_member"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_columnWeight="1" />
+
+    <include
+        android:id="@+id/memberTextile"
+        layout="@layout/item_board_member"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_columnWeight="1" />
+
+    <include
+        android:id="@+id/memberFlexingPackaging"
+        layout="@layout/item_board_member"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_columnWeight="1" />
+
+
 
 </androidx.gridlayout.widget.GridLayout> 
