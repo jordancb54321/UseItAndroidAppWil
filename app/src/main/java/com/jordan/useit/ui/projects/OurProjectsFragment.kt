@@ -24,4 +24,4 @@ class OurProjectsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

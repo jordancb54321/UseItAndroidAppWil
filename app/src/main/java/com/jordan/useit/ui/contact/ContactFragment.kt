@@ -20,7 +20,7 @@ class ContactFragment : Fragment() {
     private val whatsappNumber = "+1234567890"
     private val emailAddress = "example@example.com"
     private val phoneNumber = "+0987654321"
-    private val mapUrl = "https://www.google.com/maps"
+    private val mapUrl = "https://maps.app.goo.gl/hLoq2qvpvtFnZPz26"
 
     override fun onCreateView(
         inflater: LayoutInflater,

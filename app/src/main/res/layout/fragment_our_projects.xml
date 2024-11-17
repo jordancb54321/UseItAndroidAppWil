@@ -1,33 +1,483 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollViewProjects"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutProjects"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/projectsTitle"
-            style="@style/SectionTitle"
-            android:text="Our Projects"
-            app:layout_constraintTop_toTopOf="parent" />
+        <!-- Section: Our Partner Incubation Programs -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/partnerIncubationCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:id="@+id/projectsDescription"
-            style="@style/SectionContent"
-            android:layout_marginTop="16dp"
-            android:text="Explore our innovative waste management and recycling projects"
-            app:layout_constraintTop_toBottomOf="@id/projectsTitle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/projectsRecyclerView"
+                <TextView
+                    android:id="@+id/partnerIncubationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our Partner Incubation Programs"
+                    android:textColor="@color/primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Project 1: Owethu Sewing Project -->
+                <TextView
+                    android:id="@+id/project1Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Owethu Sewing Project"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/project1Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Born and bred in Hammarsdale, Owethu Umqhele is a co-operative made up of a group of women from our community who had a vision that required nurturing. This vision fueled their determination to turn a small sewing business into a manufacturing powerhouse. The co-operative makes products such as umbrellas, school bags, graduation gowns, pillowcases, and waste collection bags. With their unique style and quality fabrics, Owethu Umqhele now supplies its products to international clients."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Project 1 -->
+                <ImageView
+                    android:id="@+id/project1Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/owethu_sewing_project"
+                    android:contentDescription="Image of Owethu Sewing Project" />
+
+                <!-- Project 2: Educational Toy Project -->
+                <TextView
+                    android:id="@+id/project2Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Educational Toy Project"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/project2Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Cultivating great partnerships is one of the best strategies for any business. Nokulunga Ngcobo and Cebo Cele have been a great example of this value, a testament to the power of partnerships, persistence, innovation, and the belief that starting small can lead into something extraordinary. Home Deco Tech specializes in manufacturing ECD toys, using waste wood sponsored by CHEP. The importance of motor skill development in early childhood development is instilled into the fabric of this project. Home Deco Tech also has a showroom on-site to display their custom-made furniture, which is another income stream to the project."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Project 2 -->
+                <ImageView
+                    android:id="@+id/project2Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/educational_toy_project"
+                    android:contentDescription="Image of Educational Toy Project" />
+
+                <!-- Project 3: Ikhwezi Bakery -->
+                <TextView
+                    android:id="@+id/project3Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Ikhwezi Bakery"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/project3Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Serving both corporate and local consumers, Ikhwezi Bakery has become a specialist in delicious pastries and treats. The bakery is owned by Phindile Zungu, who is very passionate about her business. Just like all start-ups, Ikhwezi Bakery also faced challenges that tested our resilience with COVID-19, but their resilience became the seeds on which the business roots have been built. The bakery produces products such as bread, birthday cakes, muffins, cupcakes, doughnuts, cream cakes, and is a bread supplier to a number of retailers."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Project 3 -->
+                <ImageView
+                    android:id="@+id/project3Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ikhwezi_bakery_project"
+                    android:contentDescription="Image of Ikhwezi Bakery" />
+
+                <!-- Project 4: Clothing 4 Repurpose -->
+                <TextView
+                    android:id="@+id/project4Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Clothing 4 Repurpose"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/project4Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Crafting has been one of our key projects in our drive for upcycling. When learnership opportunities came through our sponsors, Nkanyiso Ntanzi and Noxolo Madela were the first to grab these opportunities with both hands and have been involved in crafting fashion products using waste. With their vision to redefine waste, celebrate creativity, and fashion a world where every discarded item is an opportunity for beauty and purpose, this partnership, armed with creativity and a passion for sustainability, has seen potential where others see only trash. Over the next years, we hope the Clothing Repurpose project will grow from strength to strength."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Project 4 -->
+                <ImageView
+                    android:id="@+id/project4Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/clothing_for_repurpose_project"
+                    android:contentDescription="Image of Clothing 4 Repurpose" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Section: Driving Economic Opportunities in Waste Diversion -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/economicOpportunitiesCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/partnerIncubationCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/economicOpportunitiesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driving Economic Opportunities in Waste Diversion"
+                    android:textColor="@color/primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Subsection: Innovation in Waste -->
+                <TextView
+                    android:id="@+id/innovationInWasteTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Innovation in Waste"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/innovationInWasteDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="USE-IT is a Section 21 Non-Profit Organisation with PBO status. The focus of diverting waste from landfill through innovative solutions to create employers utilizing waste as a resource has secured USE-IT with award-winning and accredited technologies that are small-scale and easy to replicate. By partnering with USE-IT, we can help you understand your own waste streams and where to divert it within the waste value chain. The collaboration of producers of waste and diversion to waste economies will provide your business with enterprise development opportunities. USE-IT provides robust reporting on beneficiaries, impact, and sustainability."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Innovation in Waste -->
+                <ImageView
+                    android:id="@+id/innovationInWasteImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/projects_innovation_in_waste"
+                    android:contentDescription="Image of Innovation in Waste" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Section: Our Innovation Projects -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/innovationProjectsCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/economicOpportunitiesCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/innovationProjectsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our Innovation Projects"
+                    android:textColor="@color/primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Project: Good Economy Project -->
+                <TextView
+                    android:id="@+id/goodEconomyProjectTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Good Economy Project"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/goodEconomyProjectDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Although USE-IT did not receive any direct funding through the project, we utilized the opportunity to partner with Litter4Tokens in 2022 to stimulate the economy through waste collection. The project provided 300 waste collectors with a monthly stipend for 3 days' work with a target of a number of bags attached to the payment. This project has injected over R5 million back into the economy of Durban."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Good Economy Project -->
+                <ImageView
+                    android:id="@+id/goodEconomyProjectImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/goodeconomy_project"
+                    android:contentDescription="Image of Good Economy Project" />
+
+                <!-- Project: Establishment of Buy-Back Centres -->
+                <TextView
+                    android:id="@+id/buyBackCentresTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Establishment of Buy-Back Centres"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Sub-project: Kwandengezi Waste Collectors Network -->
+                <TextView
+                    android:id="@+id/kwandengeziTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Kwandengezi Waste Collectors Network"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/kwandengeziDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="We have experienced some challenges in securing a suitable work site in Kwandengezi; however, engagements with the City are ongoing. We have continued to service waste diversion in the area through a network collection program with Outer West Recycling and PAT Recycling, who currently collect waste from 120 project participants on a weekly basis."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Kwandengezi Waste Collectors Network -->
+                <ImageView
+                    android:id="@+id/kwandengeziImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wastcollector_project"
+                    android:contentDescription="Image of Kwandengezi Waste Collectors Network" />
+
+                <!-- Sub-project: Clermont / New Germany - Big Start Recycling -->
+                <TextView
+                    android:id="@+id/clermontTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Clermont / New Germany - Big Start Recycling"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/clermontDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Starting with just a fence, a container, and shaded roof covering, we engaged with Big Start Training to establish a collection site and incorporated 135 waste collectors through the Good Economy Project, supplying waste to this site. This provided Big Start with free waste and paid 135 waste collectors a stipend on a monthly basis. This venture attracted additional investment through Inkwazi Isu and associated partners, and Big Start now turns over 30 tons a month of waste into the recycling value chain. They have now also received additional support from Polyco and Packa-Ching."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <!-- Image for Clermont / New Germany -->
+                <ImageView
+                    android:id="@+id/clermontImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bigstart_wastcollector_project"
+                    android:contentDescription="Image of Clermont / New Germany - Big Start Recycling" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Footer Section (Styled like your home page's footer) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/footerCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@id/projectsDescription" />
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="#333333"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/innovationProjectsCard"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/footerPartnersTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our Partners"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Partners Logos -->
+                <LinearLayout
+                    android:id="@+id/partnersLogosContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/footerPartnersTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <!-- Partner 1 Logo -->
+                    <ImageView
+                        android:id="@+id/partner1Logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/outer_west_recycling_partner"
+                        android:contentDescription="Partner 1 Logo" />
+
+                    <!-- Partner 2 Logo -->
+                    <ImageView
+                        android:id="@+id/partner2Logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bugology_partner"
+                        android:contentDescription="Partner 2 Logo" />
+
+                    <ImageView
+                        android:id="@+id/partner3Logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/keybricks_partner"
+                        android:contentDescription="Partner 2 Logo" />
+
+                    <ImageView
+                        android:id="@+id/partner4Logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/niya_consulting_partner"
+                        android:contentDescription="Partner 2 Logo" />
+
+                    <ImageView
+                        android:id="@+id/partner5Logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ethekwini_municipality_partner"
+                        android:contentDescription="Partner 2 Logo" />
+
+                    <ImageView
+                        android:id="@+id/partner6Logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bowisolve_partner"
+                        android:contentDescription="Partner 2 Logo" />
+
+                    <ImageView
+                        android:id="@+id/partner7Logo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/csir_partner"
+                        android:contentDescription="Partner 2 Logo" />
+
+
+
+                    <!-- Add more partner logos as needed -->
+                </LinearLayout>
+
+                <!-- Copyright Text -->
+                <TextView
+                    android:id="@+id/footerCopyright"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="© Copyright 2024 USE-IT Waste Beneficiation all rights reserved | Designed by SwiftTech"
+                    android:textAlignment="center"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/partnersLogosContainer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView> 
+</ScrollView>
