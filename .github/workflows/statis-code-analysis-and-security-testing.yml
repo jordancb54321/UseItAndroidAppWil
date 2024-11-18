@@ -1,0 +1,31 @@
+name: Static Code Analysis and Security Testing
+
+on:
+  workflow_run:
+    workflows: ['Build and Test']  
+    types:
+      - completed
+
+jobs:
+  detekt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Detekt
+        uses: detekt/detekt-action@v1
+        with:
+          build: 'build'  
+          output: 'detekt-report.html'  
+
+  dependency-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run OWASP Dependency-Check
+        uses: jeremydmiller/dependency-check-action@v1
+        with:
+          output-directory: './dependency-check-report'  
