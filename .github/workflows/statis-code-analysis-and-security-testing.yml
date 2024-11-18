@@ -11,21 +11,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Install Detekt
+        run: |
+          curl -sSfL https://github.com/detekt/detekt/releases/latest/download/detekt-cli-all.jar -o detekt-cli.jar
 
       - name: Run Detekt
-        uses: detekt/detekt-action@v1
+        run: |
+          java -jar detekt-cli.jar \
+          --input app/src/main \
+          --report xml:detekt-report.xml \
+          --report html:detekt-report.html \
+          --build-upon-default-config
+
+      - name: Upload Detekt Reports
+        if: always()
+        uses: actions/upload-artifact@v3
         with:
-          build: 'build'  
-          output: 'detekt-report.html'  
+          name: detekt-reports
+          path: |
+            detekt-report.xml
+            detekt-report.html
 
   dependency-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Install OWASP Dependency-Check
+        run: |
+          curl -sSfL https://github.com/jeremylong/DependencyCheck/releases/latest/download/dependency-check-7.4.0-release.zip -o dependency-check.zip
+          unzip dependency-check.zip -d dependency-check
 
       - name: Run OWASP Dependency-Check
-        uses: jeremydmiller/dependency-check-action@v1
+        run: |
+          ./dependency-check/bin/dependency-check.sh \
+          --project MyAndroidApp \
+          --scan . \
+          --out ./dependency-check-report \
+          --format ALL
+
+      - name: Upload OWASP Dependency-Check Reports
+        if: always()
+        uses: actions/upload-artifact@v3
         with:
-          output-directory: './dependency-check-report'  
+          name: dependency-check-reports
+          path: ./dependency-check-report
