@@ -16,7 +16,7 @@ jobs:
       - name: Setup Detekt
         uses: peter-murray/setup-detekt@v2
         with:
-          detekt_version: 1.20
+          detekt_version: 1.23.7
 
       - name: Run Detekt
         run: |
