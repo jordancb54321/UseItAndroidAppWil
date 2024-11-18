@@ -51,3 +51,10 @@ jobs:
         with:
           name: test-results
           path: app/build/test-results/testDebugUnitTest/*.xml
+
+      # Display test results report
+      - name: Display Test Results
+        uses: dorny/test-reporter@v1
+        with:
+          name: Display Test Results
+          path: app/build/test-results/testDebugUnitTest/*.xml
