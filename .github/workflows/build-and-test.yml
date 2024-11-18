@@ -1,0 +1,41 @@
+name: Build and Test
+
+on:
+  # Trigger the job manually, on push/pull request to the main branch
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Java 
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          version: '8'
+
+      # Set up Android SDK 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 27
+          target: android-27
+
+      # Build the project
+      - name: Build the project
+        run: ./gradlew assembleDebug
+
+      # Run unit tests
+      - name: Run unit tests
+        run: ./gradlew testDebugUnitTest
