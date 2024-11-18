@@ -9,11 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.jordan.useit.databinding.ActivityMainBinding
 import com.jordan.useit.repository.Blogger
 import com.jordan.useit.repository.data.Post
+import com.jordan.useit.repository.services.IBlogService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.awaitResponse
 
-class MainActivity : AppCompatActivity() {
+class MainActivity(private val blogService: IBlogService? = null) : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val scope = lifecycleScope
     private val blogPosts = mutableListOf<Post>() // List to store blog posts
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     suspend fun getBlogs() {
+        val service = blogService ?: Blogger.blogService
         val blogsCall = Blogger.blogService.listPosts()!!
         val blogsResponse = blogsCall.awaitResponse()
         val blogsStatus = blogsResponse.code()
