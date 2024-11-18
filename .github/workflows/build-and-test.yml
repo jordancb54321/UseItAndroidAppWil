@@ -44,3 +44,10 @@ jobs:
       # Run unit tests
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
+
+      # Generate unit test results report
+      - name: Generate test results report
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: build/test-results/testDebugUnitTest/
