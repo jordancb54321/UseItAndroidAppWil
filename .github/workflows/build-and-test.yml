@@ -23,7 +23,8 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          version: '8'
+          java-version: '8' 
+          java-package: 'jdk'
 
       # Set up Android SDK 
       - name: Set up Android SDK
