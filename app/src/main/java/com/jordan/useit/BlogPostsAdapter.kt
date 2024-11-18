@@ -22,13 +22,16 @@ class BlogPostsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlogPostViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_blog, parent, false)
+
         return BlogPostViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: BlogPostViewHolder, position: Int) {
         val post = blogPosts[position]
+
         holder.title.text = post.title
         holder.author.text = post.author.displayName
+
         Glide.with(holder.itemView.context).load(post.images?.firstOrNull()?.url).into(holder.thumbnail)
 
         holder.itemView.setOnClickListener { onPostClick(post) }

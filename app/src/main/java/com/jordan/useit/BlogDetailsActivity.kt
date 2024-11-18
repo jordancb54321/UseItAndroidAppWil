@@ -1,7 +1,9 @@
 package com.jordan.useit
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.webkit.WebSettings
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.jordan.useit.databinding.ActivityBlogDetailsBinding
@@ -15,10 +17,20 @@ class BlogDetailsActivity : AppCompatActivity() {
         binding = ActivityBlogDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val postUrl = intent.getStringExtra("post_url")
-        if (postUrl != null) {
+        supportActionBar!!.hide()
+
+        binding.backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val postContent = intent.getStringExtra("post_content")
+
+        if (postContent != null) {
             binding.webView.settings.javaScriptEnabled = true
-            binding.webView.loadUrl(postUrl)
+            binding.webView.settings.pluginState = WebSettings.PluginState.ON
+
+            binding.webView.loadDataWithBaseURL(null, postContent, "text/html", "utf-8", null);
         } else {
             Toast.makeText(this, "Invalid URL", Toast.LENGTH_SHORT).show()
         }

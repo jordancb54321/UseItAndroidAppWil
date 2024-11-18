@@ -24,7 +24,8 @@
     <string name="about_us">About Us</string>
     <string name="stay_updated_with_our_latest_blog_posts_and_news">Stay updated with our latest blog posts and news.</string>
     <string name="_2024_your_blog_all_rights_reserved">© 2024 Your Blog | All rights reserved.</string>
-    <string name="welcome_to_your_blog">Welcome to Your Blog!</string>
+    <string name="welcome_to_your_blog">Welcome to our Blog!</string>
     <string name="use_it_logo">Use-It Logo</string>
     <string name="our_blogs">Our Blogs</string>
+    <string name="back">Back</string>
 </resources>

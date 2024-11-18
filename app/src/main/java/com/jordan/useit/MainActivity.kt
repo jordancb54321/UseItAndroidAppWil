@@ -2,6 +2,8 @@ package com.jordan.useit
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -27,22 +29,25 @@ class MainActivity(private val blogService: IBlogService? = null) : AppCompatAct
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupRecyclerView()
-
         scope.launch(Dispatchers.IO) {
             getBlogs()
         }
     }
 
     private fun setupRecyclerView() {
-        adapter = BlogPostsAdapter(blogPosts) { post ->
-            // Navigate to details activity
-            val intent = Intent(this, BlogDetailsActivity::class.java)
-            intent.putExtra("post_url", post.url)
-            startActivity(intent)
-        }
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.adapter = adapter
+            Handler(Looper.getMainLooper()).post {
+                adapter = BlogPostsAdapter(blogPosts) { post ->
+                    // Navigate to details activity
+                    val intent = Intent(this, BlogDetailsActivity::class.java)
+
+                    intent.putExtra("post_content", post.content)
+
+                    startActivity(intent)
+                }
+
+                binding.recyclerView.layoutManager = LinearLayoutManager(this)
+                binding.recyclerView.adapter = adapter
+            }
     }
 
     suspend fun getBlogs() {
@@ -53,7 +58,9 @@ class MainActivity(private val blogService: IBlogService? = null) : AppCompatAct
         val blogsResponse = blogsCall.awaitResponse()
         val blogsStatus = blogsResponse.code()
 
-        Log.d("BLOGGER", "$blogsStatus")
-        Log.d("BLOGGER", "${blogsResponse.body()}")
+        if (blogsStatus == 200) {
+            blogPosts.addAll(blogsResponse.body()!!.items)
+            setupRecyclerView()
+        }
     }
 }
