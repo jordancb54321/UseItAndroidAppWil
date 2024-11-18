@@ -1,0 +1,13 @@
+style:
+  # Disable the "NewLineAtEndOfFile" rule
+  NewLineAtEndOfFile:
+    active: false
+
+  # Increase the maximum line length 
+  MaxLineLength:
+    active: true
+    max: 200
+
+  # Disable the "UnusedPrivateProperty" rule
+  UnusedPrivateProperty:
+    active: false
