@@ -13,14 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Detekt CLI
-        run: |
-          DETEKT_VERSION=$(curl -s https://api.github.com/repos/detekt/detekt/releases/latest | grep 'tag_name' | cut -d'"' -f4)
-          curl -sSfL "https://github.com/detekt/detekt/releases/download/$DETEKT_VERSION/detekt-cli-all-$DETEKT_VERSION.jar" -o detekt-cli.jar
+      - name: Setup Detekt
+        uses: peter-murray/setup-detekt@v2
+        with:
+          detekt_version: 1.20
 
       - name: Run Detekt
         run: |
-          java -jar detekt-cli.jar \
+          detekt-cli \
           --input app/src/main \
           --report xml:detekt-report.xml \
           --report html:detekt-report.html \
@@ -41,23 +41,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install OWASP Dependency-Check
-        run: |
-          DEPENDENCY_CHECK_VERSION=$(curl -s https://api.github.com/repos/jeremylong/DependencyCheck/releases/latest | grep 'tag_name' | cut -d'"' -f4)
-          curl -sSfL "https://github.com/jeremylong/DependencyCheck/releases/download/$DEPENDENCY_CHECK_VERSION/dependency-check-$DEPENDENCY_CHECK_VERSION-release.zip" -o dependency-check.zip
-          unzip dependency-check.zip -d dependency-check
-
       - name: Run OWASP Dependency-Check
-        run: |
-          ./dependency-check/bin/dependency-check.sh \
-          --project MyAndroidApp \
-          --scan . \
-          --out ./dependency-check-report \
-          --format ALL
+        uses: dependency-check/Dependency-Check_Action@main
+        with:
+          project: 'MyAndroidApp'
+          path: '.'
+          format: 'ALL'
+          out: 'dependency-check-reports'
+          args: >
+            --failOnCVSS 7
+            --enableRetired
 
       - name: Upload OWASP Dependency-Check Reports
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: dependency-check-reports
-          path: ./dependency-check-report
+          path: dependency-check-reports
