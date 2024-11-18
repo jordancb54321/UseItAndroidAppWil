@@ -33,6 +33,10 @@ jobs:
           api-level: 27
           target: android-27
 
+      # Make gradlew executable
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       # Build the project
       - name: Build the project
         run: ./gradlew assembleDebug
