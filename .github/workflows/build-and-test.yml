@@ -56,6 +56,7 @@ jobs:
       - name: Display Test Results
         uses: dorny/test-reporter@v1
         with:
-          reporter: junit
+          artifact: test-results
           name: Display Test Results
           path: app/build/test-results/testDebugUnitTest/*.xml
+          reporter: java-junit
