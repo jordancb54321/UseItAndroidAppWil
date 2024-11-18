@@ -8,5 +8,8 @@ import retrofit2.http.Query
 
 interface IBlogService {
     @GET("/blogger/v3/blogs/8563144868874529338/posts")
-    fun listPosts(@Query("key") key: String? = "AIzaSyB7g3ILvMqnvWHx3dldq1Bok9X8mzQOMbk", @Query("fetchImages") fetchImages: Boolean? = true, @Query("fetchBodies") fetchBodies: Boolean? = true): Call<Posts?>?
+    fun listPosts(@Query("key") key: String? = "AIzaSyB7g3ILvMqnvWHx3dldq1Bok9X8mzQOMbk",
+                  @Query("fetchImages")
+                  fetchImages: Boolean? = true,
+                  @Query("fetchBodies") fetchBodies: Boolean? = true): Call<Posts?>?
 }

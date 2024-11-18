@@ -46,7 +46,9 @@ class MainActivity(private val blogService: IBlogService? = null) : AppCompatAct
     }
 
     suspend fun getBlogs() {
+        @Suppress("UNUSED_VARIABLE")
         val service = blogService ?: Blogger.blogService
+
         val blogsCall = Blogger.blogService.listPosts()!!
         val blogsResponse = blogsCall.awaitResponse()
         val blogsStatus = blogsResponse.code()
