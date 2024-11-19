@@ -1,10 +1,9 @@
-package com.jordan.useit
+package com.jordan.useit.ui.blogs
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,6 +21,9 @@ class MainActivity(private val blogService: IBlogService? = null) : AppCompatAct
     private val blogPosts = mutableListOf<Post>() // List to store blog posts
     private lateinit var adapter: BlogPostsAdapter // RecyclerView adapter
 
+    companion object {
+        private const val HTTP_OK = 200 // HTTP status code for OK/Success
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +60,7 @@ class MainActivity(private val blogService: IBlogService? = null) : AppCompatAct
         val blogsResponse = blogsCall.awaitResponse()
         val blogsStatus = blogsResponse.code()
 
-        if (blogsStatus == 200) {
+        if (blogsStatus == HTTP_OK) {
             blogPosts.addAll(blogsResponse.body()!!.items)
             setupRecyclerView()
         }
