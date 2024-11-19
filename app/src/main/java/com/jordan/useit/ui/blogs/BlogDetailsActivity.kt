@@ -1,4 +1,4 @@
-package com.jordan.useit
+package com.jordan.useit.ui.blogs
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -30,7 +30,7 @@ class BlogDetailsActivity : AppCompatActivity() {
             binding.webView.settings.javaScriptEnabled = true
             binding.webView.settings.pluginState = WebSettings.PluginState.ON
 
-            binding.webView.loadDataWithBaseURL(null, postContent, "text/html", "utf-8", null);
+            binding.webView.loadDataWithBaseURL(null, postContent, "text/html", "utf-8", null)
         } else {
             Toast.makeText(this, "Invalid URL", Toast.LENGTH_SHORT).show()
         }

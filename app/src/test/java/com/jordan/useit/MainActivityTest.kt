@@ -5,6 +5,7 @@ import com.jordan.useit.repository.data.PostAuthor
 import com.jordan.useit.repository.data.PostAuthorImage
 import com.jordan.useit.repository.data.Posts
 import com.jordan.useit.repository.services.IBlogService
+import com.jordan.useit.ui.blogs.MainActivity
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Before

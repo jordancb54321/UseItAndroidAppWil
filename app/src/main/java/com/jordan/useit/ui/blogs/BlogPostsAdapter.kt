@@ -1,4 +1,4 @@
-package com.jordan.useit
+package com.jordan.useit.ui.blogs
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.jordan.useit.R
 import com.jordan.useit.repository.data.Post
 
 class BlogPostsAdapter(

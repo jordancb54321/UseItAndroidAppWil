@@ -24,8 +24,7 @@ jobs:
           --input app/src/main \
           --report xml:detekt-report.xml \
           --report html:detekt-report.html \
-          --build-upon-default-config \
-          --config detekt-config.yml
+          --build-upon-default-config
 
       - name: Upload Detekt Reports
         if: always()
